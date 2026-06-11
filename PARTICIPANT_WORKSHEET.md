@@ -1,12 +1,12 @@
 # Participant Worksheet
-## Comparing AI Vision Models on Image Metadata (90 min)
+## Comparing AI Vision Models on Image Metadata (60 min)
 
 **Name:** _________________________ **Image assigned:** ☐ 7109 ☐ 7225 ☐ 7149  
 **Background:** ☐ Educator / practitioner ☐ CS / technical ☐ Other __________
 
 ---
 
-## Part 1 — Look, then read (10 min)
+## Part 1 — Look, then read (8 min)
 
 Your instructor will show a **night trail-camera** photo. Before seeing model text, jot your own answers:
 
@@ -21,7 +21,7 @@ Your instructor will show a **night trail-camera** photo. Before seeing model te
 
 ---
 
-## Part 2 — Three models, same image (15 min)
+## Part 2 — Three models, same image (10 min)
 
 Read the three model outputs for **your assigned image** (below). Do **not** look at automated scores yet.
 

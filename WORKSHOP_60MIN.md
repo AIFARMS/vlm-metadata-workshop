@@ -1,5 +1,5 @@
 # Workshop: Comparing AI Vision Models on Image Metadata
-## 90-minute instructor guide (mixed audience: educators + CS)
+## 60-minute instructor guide (mixed audience: educators + CS)
 
 **Goal:** Participants learn how to send the same image to multiple vision-language models (VLMs), collect structured metadata, and measure whether the models are *saying the same thing* — using both human judgment and automated similarity metrics.
 
@@ -42,10 +42,10 @@
 
 | Moment | Practitioners | CS participants |
 |--------|---------------|-----------------|
-| **0:10 metadata intro** | “Questions students could answer from the photo” | Same + optional: JSON schema / MCP fields |
-| **0:40 hands-on** | Worksheet Part 3 — human Y/Partial/N | Part 3 **plus** Part 6B–C — run script, open JSON |
-| **1:05 metrics block** | 7225 vs 7149 stories, trust / review queue | Same + TF-IDF vs SBERT, threshold tuning |
-| **1:20 close** | Classroom activity ideas | Pipeline sketch: inference → metrics → HITL queue |
+| **0:08 metadata intro** | “Questions students could answer from the photo” | Same + optional: JSON schema / MCP fields |
+| **0:28 hands-on** | Worksheet Part 3 — human Y/Partial/N | Part 3 **plus** Part 6B–C — run script, open JSON |
+| **0:40 metrics block** | 7225 vs 7149 stories, trust / review queue | Same + TF-IDF vs SBERT, threshold tuning |
+| **0:52 close** | Classroom activity ideas | Pipeline sketch: inference → metrics → HITL queue |
 
 **Facilitation tip:** Assign image IDs in pairs (7109 / 7225 / 7149) so each table has mixed backgrounds; CS folks can coach lexical vs semantic without dominating.
 
@@ -83,17 +83,18 @@
 
 ---
 
-## 90-minute agenda
+## 60-minute agenda
 
 | Time | Block | What happens |
 |------|--------|----------------|
-| 0:00–0:10 | **Welcome & framing** | Intros, goals, ethics (see talking points below) |
-| 0:10–0:25 | **Metadata from images** | What VLMs return; show MCP-style fields; trail-cam example |
-| 0:25–0:40 | **Live: three models, one image** | Project `7109.jpg`; show three columns of text side by side |
-| 0:40–0:55 | **Hands-on: “Do they agree?”** | Worksheet Part 3 (all); CS: Part 6 + optional `--limit 20` run |
-| 0:55–1:05 | **Break** | ☕ |
-| 1:05–1:20 | **Metrics: strings vs meaning** | 7225 (paraphrase) vs 7149 (real disagreement); SBERT story |
-| 1:20–1:30 | **Applications & Q&A** | Practitioners: classroom ideas; CS: pipeline / metrics Q&A |
+| 0:00–0:08 | **Welcome & framing** | Intros, goals, ethics (see talking points below) |
+| 0:08–0:18 | **Metadata from images** | What VLMs return; show MCP-style fields; trail-cam example |
+| 0:18–0:28 | **Live: three models, one image** | Project `7109.jpg`; show three columns of text side by side |
+| 0:28–0:40 | **Hands-on: “Do they agree?”** | Worksheet Part 3 (all); CS: Part 6 + optional `--limit 20` run |
+| 0:40–0:52 | **Metrics: strings vs meaning** | 7225 (paraphrase) vs 7149 (real disagreement); SBERT story |
+| 0:52–1:00 | **Applications & Q&A** | Practitioners: classroom ideas; CS: pipeline / metrics Q&A |
+
+*Optional:* skip live API inference to save ~5 min; use pre-computed CSV only. No scheduled break — offer a quick stretch between blocks if the room needs it.
 
 ---
 
@@ -120,7 +121,7 @@
 
 ---
 
-## Block 1 (10 min): Welcome & framing
+## Block 1 (8 min): Welcome & framing
 
 ### Opening script (≈2 min)
 
@@ -142,7 +143,7 @@ Ask by show of hands:
 
 ---
 
-## Block 2 (15 min): Metadata from images
+## Block 2 (10 min): Metadata from images
 
 ### Teach the field set (use trail-cam photo on screen)
 
@@ -175,7 +176,7 @@ If not, skip to pre-computed CSV — same learning outcome.
 
 ---
 
-## Block 3 (15 min): Live walkthrough — `7109.jpg` (typical mixed case)
+## Block 3 (10 min): Live walkthrough — `7109.jpg` (typical mixed case)
 
 ### Show the image first (30 sec)
 
@@ -212,7 +213,7 @@ From the full coyote SBERT run (334 images):
 
 ---
 
-## Block 4 (15 min): Hands-on exercise — human agreement first
+## Block 4 (12 min): Hands-on exercise — human agreement first
 
 ### Instructions for pairs (5 min)
 
@@ -248,11 +249,7 @@ Open JSON → find their image → compare `field_results` and `divergences` to 
 
 ---
 
-## Break (10 min)
-
----
-
-## Block 5 (15 min): When agreement metrics lie and tell the truth
+## Block 5 (12 min): When agreement metrics lie and tell the truth
 
 ### Story A — `7225.jpg` (“looks broken, actually best case”)
 
@@ -334,7 +331,7 @@ Same empty answer ("not visible") →  Lexical: HIGH  |  tier: absent
 
 ---
 
-## Block 6 (10 min): Applications & close
+## Block 6 (8 min): Applications & close
 
 ### Activity ideas — practitioners (pick 2)
 
@@ -438,7 +435,7 @@ python3 classroom_demo/classroom_vlm_comparison.py --demo --image any.jpg
 | `coyote_sbert_report.json` | Full run (on Taiga; copy for offline) |
 | `handouts/` | PDF-friendly 2-page practitioner sheets, CS supplement, full print doc |
 | `PARTICIPANT_WORKSHEET.md` | All-in-one markdown handout |
-| `WORKSHOP_90MIN.md` | This instructor guide |
+| `WORKSHOP_60MIN.md` | This instructor guide |
 | `.env.example` | API key template (instructor only) |
 
 ---

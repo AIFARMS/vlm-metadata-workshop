@@ -5,7 +5,7 @@
 </style>
 
 # Participant worksheet (PDF print edition)
-## Comparing AI vision models on image metadata · 90 min
+## Comparing AI vision models on image metadata · 60 min
 
 **Name:** _________________________  
 **Image assigned:** ☐ 7109 ☐ 7225 ☐ 7149  

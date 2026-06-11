@@ -1,12 +1,12 @@
 # VLM metadata workshop
 
-**90-minute hands-on session:** send the same trail-camera image to multiple vision-language models (VLMs), collect structured metadata, and measure whether outputs **agree** — lexically (same words) and semantically (same meaning, different words).
+**60-minute hands-on session:** send the same trail-camera image to multiple vision-language models (VLMs), collect structured metadata, and measure whether outputs **agree** — lexically (same words) and semantically (same meaning, different words).
 
 Built for educators and CS instructors. No MCP server required; runs from this repo alone.
 
 | Resource | Purpose |
 |----------|---------|
-| [WORKSHOP_90MIN.md](WORKSHOP_90MIN.md) | Instructor guide (educators + CS tracks) |
+| [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md) | Instructor guide (educators + CS tracks) |
 | [PARTICIPANT_WORKSHEET.md](PARTICIPANT_WORKSHEET.md) | All-in-one participant handout |
 | [handouts/](handouts/) | Printable 2-page sheets + CS supplement — see [PRINTING.md](handouts/PRINTING.md) |
 | [workshopImages/](workshopImages/) | Demo JPEGs: `7109.jpg`, `7225.jpg`, `7149.jpg` |
@@ -31,7 +31,7 @@ python3 compare_model_agreement.py \
   --no-sbert
 ```
 
-Open `workshopImages/7109.jpg` while reading the report. Full agenda: [WORKSHOP_90MIN.md](WORKSHOP_90MIN.md).
+Open `workshopImages/7109.jpg` while reading the report. Full agenda: [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md).
 
 ### Optional: semantic (SBERT) metrics
 
@@ -72,7 +72,7 @@ If you run with `--species-hint coyote`, the script **injects** `"species": "coy
 
 > “These images come from a coyote trail-camera set. We compare scene metadata across three models. Species ID is harder — and this CSV does not include three model species columns.”
 
-In related AIFARMS MCP data, structured `species` is often `coyote` while free-text descriptions frequently hedge (“coyote or fox”, etc.). See `load_wide_csv` in `compare_model_agreement.py` and the min-vs-mean discussion in [WORKSHOP_90MIN.md](WORKSHOP_90MIN.md) Block 5.
+In related AIFARMS MCP data, structured `species` is often `coyote` while free-text descriptions frequently hedge (“coyote or fox”, etc.). See `load_wide_csv` in `compare_model_agreement.py` and the min-vs-mean discussion in [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md) Block 5.
 
 ---
 
@@ -90,7 +90,7 @@ See [handouts/PRINTING.md](handouts/PRINTING.md) for Cursor extension and browse
 
 ```
 ├── README.md
-├── WORKSHOP_90MIN.md
+├── WORKSHOP_60MIN.md
 ├── PARTICIPANT_WORKSHEET.md
 ├── requirements.txt           # core (TF-IDF metrics)
 ├── requirements-live.txt      # optional VLM APIs

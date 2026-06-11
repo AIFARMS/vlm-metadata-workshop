@@ -78,7 +78,7 @@ Assign images round-robin at tables (7109 → 7225 → 7149 → …).
 
 ## Instructor copies
 
-Keep `worksheet_pdf_full.md` (or `WORKSHOP_90MIN.md` answer key) for verdicts: 7109 mixed, 7225 auto-trust, 7149 high_divergence.
+Keep `worksheet_pdf_full.md` (or `WORKSHOP_60MIN.md` answer key) for verdicts: 7109 mixed, 7225 auto-trust, 7149 high_divergence.
 
 ## Workshop demo images (7109, 7225, 7149)
 

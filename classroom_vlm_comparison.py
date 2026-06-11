@@ -492,7 +492,7 @@ You're set for the workshop. Here's what's ready in one place:
 
 Materials
 
-classroom_demo/WORKSHOP_90MIN.md — 90-min instructor guide (mixed educator + CS)
+classroom_demo/WORKSHOP_60MIN.md — 60-min instructor guide (mixed educator + CS)
 classroom_demo/handouts/ — 2-page sheets per image + CS supplement + print guide
 classroom_demo/workshop_images/ — 7109, 7225, 7149
 classroom_demo/coyote_metadata_comparison.csv — 334×3 pre-computed model outputs
