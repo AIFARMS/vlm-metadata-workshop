@@ -92,7 +92,6 @@ See [handouts/PRINTING.md](handouts/PRINTING.md) for Cursor extension and browse
 ├── README.md
 ├── WORKSHOP_90MIN.md
 ├── PARTICIPANT_WORKSHEET.md
-├── PUBLISHING.md              # how to push this folder to its own GitHub repo
 ├── requirements.txt           # core (TF-IDF metrics)
 ├── requirements-live.txt      # optional VLM APIs
 ├── requirements-sbert.txt     # optional SBERT
