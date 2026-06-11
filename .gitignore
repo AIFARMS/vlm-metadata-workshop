@@ -1,0 +1,29 @@
+# Secrets — never commit
+.env
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env.local
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Regenerated outputs (re-run compare_model_agreement.py)
+coyote_metrics/
+coyote_agreement_metrics/
+coyote_agreement_report.json
+coyote_sbert_report.json
+/tmp/
+
+# Optional: uncomment to keep PDFs out of git (regenerate with handouts/make_pdfs.sh)
+# handouts/*.pdf
+
+# Internal / HPC-only notes
+demo_tutorial.txt

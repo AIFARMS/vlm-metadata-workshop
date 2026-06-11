@@ -1,0 +1,65 @@
+{
+  "default": [
+    {
+      "model_id": "gpt4o:gpt-4o",
+      "provider": "gpt4o",
+      "latency_sec": 4.2,
+      "raw_text": "{\"description\": \"A metallic green beetle with pale markings rests on moss and leaf litter in a shaded outdoor setting.\", \"species\": \"Rose Chafer\", \"scientific_name\": \"Cetonia aurata\", \"common_name\": \"European Rose Chafer\", \"scene\": \"forest floor\", \"time\": \"day\", \"season\": \"unknown\", \"weather\": \"not visible\", \"lighting\": \"moderate natural light with some flash\", \"action\": \"resting\", \"date\": \"unknown\", \"confidence\": \"medium\"}",
+      "parsed": {
+        "description": "A metallic green beetle with pale markings rests on moss and leaf litter in a shaded outdoor setting.",
+        "species": "Rose Chafer",
+        "scientific_name": "Cetonia aurata",
+        "common_name": "European Rose Chafer",
+        "scene": "forest floor",
+        "time": "day",
+        "season": "unknown",
+        "weather": "not visible",
+        "lighting": "moderate natural light with some flash",
+        "action": "resting",
+        "date": "unknown",
+        "confidence": "medium"
+      }
+    },
+    {
+      "model_id": "gemini:gemini-2.0-flash",
+      "provider": "gemini",
+      "latency_sec": 2.8,
+      "raw_text": "{\"description\": \"Close-up of a shiny beetle on ground cover with moss and small plants.\", \"species\": \"beetle\", \"scientific_name\": \"\", \"common_name\": \"Rose beetle\", \"scene\": \"garden ground\", \"time\": \"unclear\", \"season\": \"unknown\", \"weather\": \"not visible\", \"lighting\": \"bright\", \"action\": \" crawling\", \"date\": \"unknown\", \"confidence\": \"low\"}",
+      "parsed": {
+        "description": "Close-up of a shiny beetle on ground cover with moss and small plants.",
+        "species": "beetle",
+        "scientific_name": "",
+        "common_name": "Rose beetle",
+        "scene": "garden ground",
+        "time": "unclear",
+        "season": "unknown",
+        "weather": "not visible",
+        "lighting": "bright",
+        "action": "crawling",
+        "date": "unknown",
+        "confidence": "low"
+      }
+    },
+    {
+      "model_id": "claude:claude-3-5-sonnet-20241022",
+      "provider": "claude",
+      "latency_sec": 3.5,
+      "raw_text": "{\"description\": \"A dark beetle with iridescent green tones and light speckling is photographed on natural debris.\", \"species\": \"Japanese Beetle\", \"scientific_name\": \"Popillia japonica\", \"common_name\": \"Japanese Beetle\", \"scene\": \"outdoor ground\", \"time\": \"day\", \"season\": \"summer\", \"weather\": \"not visible\", \"lighting\": \"natural daylight\", \"action\": \"stationary\", \"date\": \"unknown\", \"confidence\": \"medium\"}",
+      "parsed": {
+        "description": "A dark beetle with iridescent green tones and light speckling is photographed on natural debris.",
+        "species": "Japanese Beetle",
+        "scientific_name": "Popillia japonica",
+        "common_name": "Japanese Beetle",
+        "scene": "outdoor ground",
+        "time": "day",
+        "season": "summer",
+        "weather": "not visible",
+        "lighting": "natural daylight",
+        "action": "stationary",
+        "date": "unknown",
+        "confidence": "medium"
+      }
+    }
+  ],
+  "by_image": {}
+}
