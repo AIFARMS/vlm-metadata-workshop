@@ -502,6 +502,6 @@ Day-of flow (short)
 Project 7109 → three model columns → human agree/partial/disagree
 Reveal scores → 7225 (paraphrase surprise) → 7149 (fog outlier)
 Close with: agreement ≠ truth; species solid; almost nothing auto-trusts
-Print (~20 people): 4×7109, 3×7225, 3×7149 handouts + 8–10 CS supplements (see handouts/PRINTING.md).
+Print (~20 people): 4×7109, 3×7225, 3×7149 handouts + 8–10 CS supplements (see handouts/make_pdfs.sh).
 
 Good luck with the session — it should land well with both practitioners and CS folks. If you want speaker notes on one slide or a 5-minute backup plan if Wi‑Fi fails, say the word.

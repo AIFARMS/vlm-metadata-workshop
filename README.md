@@ -8,7 +8,7 @@ Built for educators and CS instructors. No MCP server required; runs from this r
 |----------|---------|
 | [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md) | Instructor guide (educators + CS tracks) |
 | [PARTICIPANT_WORKSHEET.md](PARTICIPANT_WORKSHEET.md) | All-in-one participant handout |
-| [handouts/](handouts/) | Printable 2-page sheets + CS supplement — see [PRINTING.md](handouts/PRINTING.md) |
+| [handouts/](handouts/) | Printable 2-page sheets + CS supplement |
 | [workshopImages/](workshopImages/) | Demo JPEGs: `7109.jpg`, `7225.jpg`, `7149.jpg` |
 | [coyote_metadata_comparison.csv](coyote_metadata_comparison.csv) | Pre-computed outputs: **334 images × 3 models** |
 | [compare_model_agreement.py](compare_model_agreement.py) | Agreement report + optional SBERT metrics |
@@ -82,7 +82,7 @@ In related AIFARMS MCP data, structured `species` is often `coyote` while free-t
 cd handouts && ./make_pdfs.sh
 ```
 
-See [handouts/PRINTING.md](handouts/PRINTING.md) for Cursor extension and browser alternatives.
+Or in Cursor: install **Markdown PDF** extension → open a `.md` handout → `Cmd+Shift+P` → **Markdown PDF: Export (pdf)**.
 
 ---
 

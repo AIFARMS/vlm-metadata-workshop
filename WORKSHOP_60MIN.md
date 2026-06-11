@@ -5,7 +5,7 @@
 
 **Audiences:** Classroom practitioners (ag, bio, STEM educators) and CS folks (students, developers, data engineers) in the same room. Same core demo; **dual tracks** during hands-on and closing (see below).
 
-**Participant handout:** Print from `handouts/` — see **`handouts/PRINTING.md`**
+**Participant handout:** Print from `handouts/` (`practitioner_*_2page.md`, `cs_supplement_1page.md`, or run `./handouts/make_pdfs.sh`)
 
 | Who | File |
 |-----|------|
@@ -402,7 +402,7 @@ python3 classroom_demo/classroom_vlm_comparison.py --demo --image any.jpg
 
 ## Instructor prep checklist (week before)
 
-- [ ] Print handouts from **`handouts/`** — mix of `practitioner_*_2page.md` by table assignment + `cs_supplement_1page.md` for CS (see `PRINTING.md`)
+- [ ] Print handouts from **`handouts/`** — mix of `practitioner_*_2page.md` by table assignment + `cs_supplement_1page.md` for CS (~4×7109, 3×7225, 3×7149, 8–10 CS supplements)
 - [x] Demo images in `classroom_demo/workshop_images/` (7109, 7225, 7149)
 - [ ] Test `compare_model_agreement.py --limit 5 --no-sbert` on your laptop
 - [ ] Print or share CSV excerpt (3 rows) for Tier B participants

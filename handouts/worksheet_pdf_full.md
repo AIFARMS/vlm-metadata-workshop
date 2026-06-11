@@ -142,4 +142,4 @@
 
 *CS participants: also print `cs_supplement_1page.md`*  
 *Educators: prefer `practitioner_<image>_2page.md` (shorter)*  
-*Print guide: `handouts/PRINTING.md`*
+*Print PDFs: `cd handouts && ./make_pdfs.sh`*
