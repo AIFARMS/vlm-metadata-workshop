@@ -132,7 +132,6 @@ Large ad-hoc outputs (`coyote_metrics/`, `coyote_agreement_report.json`) stay gi
 
 - **Software and docs:** [Apache License 2.0](LICENSE)
 - **Trail-camera demo images:** educational use; confirm your institution’s policy before redistributing. Coyote images derive from camera-trap collections used in the AIFARMS MCP project (see [LILA Idaho Camera Traps](https://lila.science/datasets/idaho-camera-traps/) for source licensing context).
-- **Do not commit API keys** — use `.env` (see `.env.example`).
 
 ---
 
