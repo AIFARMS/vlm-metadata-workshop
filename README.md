@@ -6,8 +6,7 @@ Built for educators and CS instructors. No MCP server required; runs from this r
 
 | Resource | Purpose |
 |----------|---------|
-| [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md) | Instructor guide (educators + CS tracks) |
-| [PARTICIPANT_WORKSHEET.md](PARTICIPANT_WORKSHEET.md) | All-in-one participant handout |
+| [PARTICIPANT_WORKSHEET.md](PARTICIPANT_WORKSHEET.md) | Participant handout (print or share) |
 | [handouts/](handouts/) | Printable 2-page sheets + CS supplement |
 | [workshopImages/](workshopImages/) | Demo JPEGs: `7109.jpg`, `7225.jpg`, `7149.jpg` |
 | [coyote_metadata_comparison.csv](coyote_metadata_comparison.csv) | Pre-computed outputs: **334 images × 3 models** |
@@ -32,7 +31,7 @@ python3 compare_model_agreement.py \
   --no-sbert
 ```
 
-Open `workshopImages/7109.jpg` while reading the report. Full agenda: [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md).
+Open `workshopImages/7109.jpg` while reading the report. Session handout: [PARTICIPANT_WORKSHEET.md](PARTICIPANT_WORKSHEET.md).
 
 ### Pre-computed SBERT (bundled — no GPU)
 
@@ -86,7 +85,7 @@ Weather · Background · Lighting · Time of Day · Setting (scene)
 
 If you run with `--species-hint coyote`, the script **injects** `"species": "coyote"` for all models on every row. That yields **100% species agreement by construction** — not evidence that every VLM identified coyote correctly.
 
-In related AIFARMS MCP data, structured `species` is often `coyote` while free-text descriptions frequently hedge (“coyote or fox”, etc.). See `load_wide_csv` in `compare_model_agreement.py` and the min-vs-mean discussion in [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md) Block 5.
+In related AIFARMS MCP data, structured `species` is often `coyote` while free-text descriptions frequently hedge (“coyote or fox”, etc.). See `load_wide_csv` in `compare_model_agreement.py` and [handouts/cs_supplement_1page.md](handouts/cs_supplement_1page.md) for min-vs-mean pairwise semantics.
 
 ---
 
@@ -104,7 +103,6 @@ Or in Cursor: install **Markdown PDF** extension → open a `.md` handout → `C
 
 ```
 ├── README.md
-├── WORKSHOP_60MIN.md
 ├── PARTICIPANT_WORKSHEET.md
 ├── requirements.txt           # core (TF-IDF metrics)
 ├── requirements-live.txt      # optional VLM APIs
