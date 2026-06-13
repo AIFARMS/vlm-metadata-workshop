@@ -5,7 +5,7 @@
 </style>
 
 # Workshop handout — Image **7149**
-### Comparing AI vision models (educator / practitioner · ~2 pages)
+### Comparing AI vision models (~2 pages · image 7149)
 
 **Name:** _________________________ **Date:** _____________
 
@@ -99,4 +99,4 @@
 
 *This image is a review-queue example — hard scene (fog), not just paraphrase.*
 
-*CS extension: see `cs_supplement_1page.md`*
+*Optional depth: `technical_reference_1page.md` · Full worksheet: `PARTICIPANT_WORKSHEET.md`*

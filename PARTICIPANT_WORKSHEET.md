@@ -2,9 +2,11 @@
 ## Comparing AI Vision Models on Image Metadata (60 min)
 
 **Name:** _________________________ **Image assigned:** ☐ 7109 ☐ 7225 ☐ 7149  
-**Background:** ☐ Educator / practitioner ☐ CS / technical ☐ Other __________
+**Optional:** ☐ Comfortable running Python on a laptop
 
 **Note:** Tables and CSV columns label the middle Azure model **GPT-4.5**, but the deployment used for this workshop data was **GPT-4.1** (an Azure preview later retired and released as GPT-4.1—the export label was left unchanged).
+
+**How this session works:** Everyone follows **Parts 1–5** (observe → judge agreement → compare to the pipeline). **Part 6** is optional depth if you have a laptop and want to run the repo or inspect bundled metrics files.
 
 ---
 
@@ -82,7 +84,7 @@ For **your image**, mark each field. Use **your judgment**, not keyword matching
 
 ## Part 4 — Compare to the pipeline (instructor reveals)
 
-After the instructor runs the agreement report, fill in:
+After the instructor shows the agreement report (or bundled metrics), fill in:
 
 | Question | Your answer |
 |----------|-------------|
@@ -93,7 +95,7 @@ After the instructor runs the agreement report, fill in:
 
 ---
 
-## Part 5 — Debrief (all participants)
+## Part 5 — Debrief (everyone)
 
 Discuss in pairs, then share with the room:
 
@@ -103,15 +105,15 @@ Discuss in pairs, then share with the room:
 
 3. **Where did models actually disagree on facts?** (Example: buildings vs natural field; fog described vs missing.)
 
-4. **For your classroom or project:** One activity where students compare AI output to their own observation.
+4. **Application:** One way you could use this comparison exercise—in a course, a research pipeline, or a software project.
 
-5. **Ethics:** What image types should *not* go through a cloud VLM in a K–12 or university class?
+5. **Ethics:** What image types should *not* go through a cloud VLM without careful policy and consent?
 
 ---
 
-## Part 6 — CS / technical extension (optional)
+## Part 6 — Hands-on with the repo (optional depth)
 
-*Skip if you are focused on classroom use; discuss with your pair if time allows.*
+*For anyone with a laptop. Part 3 is the anchor—use your human rubric when reading script output.*
 
 ### A. Metrics vocabulary
 
@@ -151,6 +153,8 @@ When is **min** too strict? ____________________________________________________
 **Quick smoke test** — processes **20 of 334** images (omit `--limit` for the full CSV):
 
 ```bash
+pip install -r requirements.txt   # once per machine
+
 python3 compare_model_agreement.py \
   --csv coyote_metadata_comparison.csv \
   --species-hint coyote \
@@ -161,27 +165,31 @@ python3 compare_model_agreement.py \
 
 Open `/tmp/workshop_report.json` → find your image under `"assessments"` → compare `field_results` and `semantic_trust` to Part 3.
 
-**SBERT tiers (full 334):** use `coyote_sbert_metrics/image_trust_summary.json` — no GPU or PyTorch required.
+**SBERT tiers (full 334, no install):** open `coyote_sbert_metrics/image_trust_summary.json` or filter any `*_metrics.csv` on `image_id == 7225.jpg`.
 
 **Stretch:** Using bundled SBERT for 7225, which fields move from partial → high vs lexical? (Hint: lighting/time paraphrases.)
 
-Draw or describe a minimal pipeline:
+### D. Pipeline sketch
 
 ```
-[image] → [3 VLMs] → [???] → [trust / review queue]
+[image] → [3 VLMs] → [ ??? ] → [trust / review queue]
 ```
 
-What belongs in `[???]` for a production system that is *not* just “pick the longest answer”?
+What belongs in `[ ??? ]` besides “pick the longest answer”?
+
+___________________________________________________________________________
+
+**Note:** `best_model` in metrics CSV is consensus-heuristic, not ground-truth accuracy.
 
 ---
 
-## Reference — dataset headlines (instructor slide)
+## Reference — dataset headlines
 
 | Stat | Value |
 |------|-------|
 | Trail-cam images | 334 |
 | Models | GPT-4o, GPT-4.5, Llama |
-| Species agreement | 100% |
+| Species agreement | 100% *(injected when using `--species-hint coyote`)* |
 | Mean lexical overall | ~42% |
 | Auto-trust (strict rule, ≥4 of 5 fields) | 2 images (0.6%) |
 | High-divergence outliers | 5 images |
@@ -190,4 +198,4 @@ What belongs in `[???]` for a production system that is *not* just “pick the l
 
 ---
 
-*Workshop materials: `handouts/` — short educator sheets: `practitioner_*_2page.md` · CS: `cs_supplement_1page.md`*
+*Optional one-page metric cheat sheet: [handouts/technical_reference_1page.md](handouts/technical_reference_1page.md)*

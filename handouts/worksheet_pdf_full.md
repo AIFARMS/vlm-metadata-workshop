@@ -9,7 +9,7 @@
 
 **Name:** _________________________  
 **Image assigned:** ☐ 7109 ☐ 7225 ☐ 7149  
-**Background:** ☐ Educator ☐ CS / technical ☐ Other __________
+**Optional:** ☐ Comfortable running Python on a laptop
 
 <div class="pagebreak"></div>
 
@@ -140,6 +140,6 @@
 
 ---
 
-*CS participants: also print `cs_supplement_1page.md`*  
-*Educators: prefer `practitioner_<image>_2page.md` (shorter)*  
+*Optional cheat sheet: `technical_reference_1page.md`*  
+*Shorter per-image sheets: `practitioner_<image>_2page.md`*
 *Print PDFs: `cd handouts && ./make_pdfs.sh`*

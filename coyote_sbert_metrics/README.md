@@ -40,7 +40,7 @@ Expected: **`7221.jpg`**, **`7225.jpg`** (4/5 each).
 | `7225.jpg` | SBERT auto-trust surprise | 4/5 |
 | `7149.jpg` | Fog / high divergence | ~1/5 |
 
-**CS track — one row in Excel or Python:**
+**Hands-on — one row in Excel or Python:**
 
 ```python
 import pandas as pd

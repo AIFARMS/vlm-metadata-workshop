@@ -11,7 +11,7 @@ fi
 ENGINE="${PDF_ENGINE:-xelatex}"
 MARGIN="${PDF_MARGIN:-0.75in}"
 
-for f in practitioner_7109_2page practitioner_7225_2page practitioner_7149_2page cs_supplement_1page; do
+for f in practitioner_7109_2page practitioner_7225_2page practitioner_7149_2page technical_reference_1page; do
   if [[ ! -f "${f}.md" ]]; then
     echo "Skip (missing): ${f}.md"
     continue

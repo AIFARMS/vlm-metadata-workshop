@@ -5,7 +5,7 @@
 </style>
 
 # Workshop handout — Image **7109**
-### Comparing AI vision models (educator / practitioner · ~2 pages)
+### Comparing AI vision models (~2 pages · image 7109)
 
 **Name:** _________________________ **Date:** _____________
 
@@ -97,4 +97,4 @@
 
 **Reference (334 coyote trail-cam images):** scene fields ~42% lexical agreement · strict auto-trust 2/334 · **Species is not compared in this CSV** (see README) · agreement among models ≠ ground truth
 
-*CS extension: see `cs_supplement_1page.md`*
+*Optional depth: `technical_reference_1page.md` · Full worksheet: `PARTICIPANT_WORKSHEET.md`*

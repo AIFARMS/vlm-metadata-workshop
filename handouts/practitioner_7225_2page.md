@@ -5,7 +5,7 @@
 </style>
 
 # Workshop handout — Image **7225**
-### Comparing AI vision models (educator / practitioner · ~2 pages)
+### Comparing AI vision models (~2 pages · image 7225)
 
 **Name:** _________________________ **Date:** _____________
 
@@ -99,4 +99,4 @@
 
 *This image is one of only 2 that pass strict semantic auto-trust — compare with 7109 and 7149.*
 
-*CS extension: see `cs_supplement_1page.md`*
+*Optional depth: `technical_reference_1page.md` · Full worksheet: `PARTICIPANT_WORKSHEET.md`*

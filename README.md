@@ -2,12 +2,12 @@
 
 **60-minute hands-on session:** send the same trail-camera image to multiple vision-language models (VLMs), collect structured metadata, and measure whether outputs **agree** — lexically (same words) and semantically (same meaning, different words).
 
-Built for educators and CS instructors. No MCP server required; runs from this repo alone.
+Built for **educators, developers, and mixed rooms** — one core worksheet (human judgment first), optional repo hands-on for those with laptops. No MCP server required.
 
 | Resource | Purpose |
 |----------|---------|
-| [PARTICIPANT_WORKSHEET.md](PARTICIPANT_WORKSHEET.md) | Participant handout (print or share) |
-| [handouts/](handouts/) | Printable 2-page sheets + CS supplement |
+| [PARTICIPANT_WORKSHEET.md](PARTICIPANT_WORKSHEET.md) | Main handout — **everyone** (Parts 1–5 core; Part 6 optional depth) |
+| [handouts/technical_reference_1page.md](handouts/technical_reference_1page.md) | Optional one-page metrics cheat sheet (print with worksheet) |
 | [workshopImages/](workshopImages/) | Demo JPEGs: `7109.jpg`, `7225.jpg`, `7149.jpg` |
 | [coyote_metadata_comparison.csv](coyote_metadata_comparison.csv) | Pre-computed outputs: **334 images × 3 models** |
 | [coyote_sbert_metrics/](coyote_sbert_metrics/) | Pre-computed **SBERT** agreement (334 images) |
@@ -35,7 +35,7 @@ Open `workshopImages/7109.jpg` while reading the report. Session handout: [PARTI
 
 ### Pre-computed SBERT (bundled — no GPU)
 
-The repo ships **`coyote_sbert_metrics/`** and **`coyote_sbert_report.json`** so instructors and CS participants can explore semantic tiers without running SBERT.
+The repo ships **`coyote_sbert_metrics/`** and **`coyote_sbert_report.json`** so participants can explore semantic tiers without running SBERT.
 
 ```bash
 # Lookup auto-trust images (expect 7221.jpg, 7225.jpg)
@@ -85,7 +85,7 @@ Weather · Background · Lighting · Time of Day · Setting (scene)
 
 If you run with `--species-hint coyote`, the script **injects** `"species": "coyote"` for all models on every row. That yields **100% species agreement by construction** — not evidence that every VLM identified coyote correctly.
 
-In related AIFARMS MCP data, structured `species` is often `coyote` while free-text descriptions frequently hedge (“coyote or fox”, etc.). See `load_wide_csv` in `compare_model_agreement.py` and [handouts/cs_supplement_1page.md](handouts/cs_supplement_1page.md) for min-vs-mean pairwise semantics.
+In related AIFARMS MCP data, structured `species` is often `coyote` while free-text descriptions frequently hedge (“coyote or fox”, etc.). See `load_wide_csv` in `compare_model_agreement.py` and [handouts/technical_reference_1page.md](handouts/technical_reference_1page.md) for min-vs-mean pairwise semantics.
 
 ---
 
