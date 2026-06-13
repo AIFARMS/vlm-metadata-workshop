@@ -9,7 +9,7 @@
 
 **Name:** _________________________ **Image:** ☐ 7109 ☐ 7225 ☐ 7149
 
-Print this **with** [PARTICIPANT_WORKSHEET.md](../PARTICIPANT_WORKSHEET.md) if you want a compact metrics cheat sheet. Everyone still does Parts 1–5 first.
+*Optional companion to the main worksheet — complete **Parts 1–5** there before using this page.*
 
 ---
 

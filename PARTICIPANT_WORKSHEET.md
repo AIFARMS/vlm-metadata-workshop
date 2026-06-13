@@ -49,6 +49,8 @@ Read the three model outputs for **your assigned image** (below). Do **not** loo
 | Time | Nighttime | Night time, 01:52 AM (timestamp) | Night |
 | Scene | Outdoor, dry grass and bushes | Natural outdoor, grassy area with bushes | Grassy area, trees and bushes |
 
+*Paraphrase example: same night scene, different wording — bundled SBERT often treats lighting/scene/background as high agreement even when words differ.*
+
 ### If you have **7149.jpg**
 
 | Field | GPT-4o | GPT-4.5 | Llama |
@@ -58,6 +60,8 @@ Read the three model outputs for **your assigned image** (below). Do **not** loo
 | Lighting | Low light, nighttime | Low-light, infrared / night-vision | Low light, nighttime or early morning |
 | Time | Nighttime (timestamp, low light) | Early morning (3:30 AM) | Early morning (~3:30 AM) |
 | Scene | Open outdoor, field, grass/vegetation | Outdoor, natural grassy area | Outdoor, fog or heavy mist |
+
+*Compare with **7225**: on 7149, models often disagree on **facts** (foggy scene; one model skips weather), not just different wording for the same idea. You would **not** auto-save this row without human review.*
 
 ---
 

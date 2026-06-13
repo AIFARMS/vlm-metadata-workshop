@@ -97,6 +97,6 @@
 
 **Reference:** 334-image coyote set · 5 high-divergence outliers · **species not in comparison CSV** · agreement ≠ truth
 
-*This image is a review-queue example — hard scene (fog), not just paraphrase.*
+*This image shows **real disagreement** on a hard foggy scene — not the same as 7225, where models mostly agree but use different words.*
 
 *Optional depth: `technical_reference_1page.md` · Full worksheet: `PARTICIPANT_WORKSHEET.md`*
