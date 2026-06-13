@@ -21,7 +21,6 @@ Also copy **`../coyote_sbert_report.json`** (full agreement report with `assessm
 When Taiga is mounted:
 
 ```bash
-cd classroom_demo
 ./copy_sbert_from_taiga.sh
 git add coyote_sbert_metrics/ coyote_sbert_report.json
 git status   # confirm files present
@@ -66,6 +65,15 @@ row = df[df["image_id"] == "7225.jpg"].iloc[0]
 print(row[["min_pairwise_semantic", "semantic_agreement", "trusted_for_auto_use"]])
 ```
 
-## Regenerate on Delta
+## Regenerate (maintainers, GPU / PyTorch ≥ 2.4)
 
-See `submit_coyote_sbert_eval.slurm`, then re-run `copy_sbert_from_taiga.sh`.
+```bash
+pip install -r requirements-sbert.txt
+python3 compare_model_agreement.py \
+  --csv coyote_metadata_comparison.csv \
+  --species-hint coyote \
+  --output coyote_sbert_report.json \
+  --metrics-dir coyote_sbert_metrics/
+```
+
+Set `SBERT_CACHE` or `HF_HOME` if you need a non-default Hugging Face cache directory.
