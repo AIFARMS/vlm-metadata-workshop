@@ -227,6 +227,8 @@ Data is on the worksheet; optional source: `coyote_metadata_comparison.csv`.
 
 ### Run the script (instructor, 5 min)
 
+**Smoke test (20 rows)** — full dataset is 334 images; use bundled SBERT for the metrics block:
+
 ```bash
 python3 compare_model_agreement.py \
   --csv coyote_metadata_comparison.csv \

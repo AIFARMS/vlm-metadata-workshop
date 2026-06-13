@@ -146,6 +146,8 @@ When is **min** too strict? ____________________________________________________
 
 ### C. Try it (laptop + repo)
 
+**Quick smoke test** — processes **20 of 334** images (omit `--limit` for the full CSV):
+
 ```bash
 python3 compare_model_agreement.py \
   --csv coyote_metadata_comparison.csv \
@@ -157,9 +159,9 @@ python3 compare_model_agreement.py \
 
 Open `/tmp/workshop_report.json` → find your image under `"assessments"` → compare `field_results` and `semantic_trust` to Part 3.
 
-**Stretch:** Re-run one image mentally with SBERT — which fields would move from partial → high? (Hint: lighting/time paraphrases.)
+**SBERT tiers (full 334):** use `coyote_sbert_metrics/image_trust_summary.json` — no GPU or PyTorch required.
 
-### D. Implementation sketch (5 min)
+**Stretch:** Using bundled SBERT for 7225, which fields move from partial → high vs lexical? (Hint: lighting/time paraphrases.)
 
 Draw or describe a minimal pipeline:
 

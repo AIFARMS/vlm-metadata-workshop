@@ -45,6 +45,8 @@ When is min **too** strict? ____________________________________________________
 
 ## C. Run it *(laptop + repo)*
 
+**Quick smoke test** (first 20 images only — fast, no SBERT):
+
 ```
 python3 compare_model_agreement.py \
   --csv coyote_metadata_comparison.csv \
@@ -53,9 +55,11 @@ python3 compare_model_agreement.py \
   --limit 20 --no-sbert
 ```
 
+The CSV has **334** coyote images; `--limit 20` keeps the run under ~30s on a laptop. Omit `--limit` to process all 334 (still TF-IDF-only with `--no-sbert`).
+
 In JSON → `assessments` → your image → compare `field_results` and `semantic_trust` to the educator rubric.
 
-**Or use bundled SBERT (no run):** open `coyote_sbert_metrics/lighting_metrics.csv` (or any attribute) and filter `image_id == 7225.jpg`; see `image_trust_summary.json` for auto-trust.
+**Full SBERT run (334 images, no script needed):** use bundled outputs — `coyote_sbert_report.json` and `coyote_sbert_metrics/image_trust_summary.json`. Filter any `*_metrics.csv` on `image_id == 7225.jpg` for per-field SBERT cosines.
 
 **Which fields would SBERT likely upgrade from partial → high?** ________________
 
