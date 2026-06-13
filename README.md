@@ -89,10 +89,6 @@ Weather · Background · Lighting · Time of Day · Setting (scene)
 
 If you run with `--species-hint coyote`, the script **injects** `"species": "coyote"` for all models on every row. That yields **100% species agreement by construction** — not evidence that every VLM identified coyote correctly.
 
-**For the classroom, say:**
-
-> “These images come from a coyote trail-camera set. We compare scene metadata across three models. Species ID is harder — and this CSV does not include three model species columns.”
-
 In related AIFARMS MCP data, structured `species` is often `coyote` while free-text descriptions frequently hedge (“coyote or fox”, etc.). See `load_wide_csv` in `compare_model_agreement.py` and the min-vs-mean discussion in [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md) Block 5.
 
 ---
