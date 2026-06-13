@@ -46,14 +46,16 @@ When is min **too** strict? ____________________________________________________
 ## C. Run it *(laptop + repo)*
 
 ```
-python3 classroom_demo/compare_model_agreement.py \
-  --csv classroom_demo/coyote_metadata_comparison.csv \
+python3 compare_model_agreement.py \
+  --csv coyote_metadata_comparison.csv \
   --species-hint coyote \
   --output /tmp/workshop_report.json \
   --limit 20 --no-sbert
 ```
 
 In JSON → `assessments` → your image → compare `field_results` and `semantic_trust` to the educator rubric.
+
+**Or use bundled SBERT (no run):** open `coyote_sbert_metrics/lighting_metrics.csv` (or any attribute) and filter `image_id == 7225.jpg`; see `image_trust_summary.json` for auto-trust.
 
 **Which fields would SBERT likely upgrade from partial → high?** ________________
 

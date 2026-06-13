@@ -10,14 +10,14 @@ Examples:
   python compare_model_agreement.py --input output/beetle_comparison.jsonl
 
   # Agreement + semantic metrics (SBERT/TF-IDF) in one command:
-  python compare_model_agreement.py --csv classroom_demo/coyote_metadata_comparison.csv \\
-      --species-hint coyote --output classroom_demo/coyote_agreement_report.json
+  python compare_model_agreement.py --csv coyote_metadata_comparison.csv \\
+      --species-hint coyote --output coyote_agreement_report.json
 
-  python compare_model_agreement.py --csv classroom_demo/coyote_metadata_comparison.csv \\
+  python compare_model_agreement.py --csv coyote_metadata_comparison.csv \\
       --species-hint coyote --output coyote_agreement_report.json --limit 20 --no-sbert
 
 Optional semantic summary (needs OPENAI_API_KEY or GOOGLE_API_KEY):
-  python compare_model_agreement.py --csv classroom_demo/coyote_metadata_comparison.csv --narrative
+  python compare_model_agreement.py --csv coyote_metadata_comparison.csv --narrative
 """
 from __future__ import annotations
 

@@ -59,10 +59,10 @@
 |------|--------|
 | Laptop + projector | Test HDMI/adapters day before |
 | Python 3.10+ | `pip install pandas scikit-learn` minimum; SBERT optional |
-| This repo | `classroom_demo/` folder |
+| This repo | Clone [vlm-metadata-workshop](https://github.com/AIFARMS/vlm-metadata-workshop); `cd` into repo root |
 | Pre-built coyote CSV | `coyote_metadata_comparison.csv` (334 images × 3 models) |
-| Full SBERT report (optional) | From Taiga: `coyote_sbert_report.json` |
-| **3 demo images** | `classroom_demo/workshop_images/{7109,7225,7149}.jpg` |
+| **SBERT metrics (bundled)** | `coyote_sbert_metrics/` + `coyote_sbert_report.json` |
+| **3 demo images** | `workshopImages/{7109,7225,7149}.jpg` |
 | Slides (optional) | 5–8 slides: agenda, metadata fields, one results table |
 
 ### Participants
@@ -77,7 +77,7 @@
 
 ### API keys (instructor only, optional for live inference)
 
-- Copy `classroom_demo/.env.example` → `.env`, `chmod 600 .env`
+- Copy `.env.example` → `.env`, `chmod 600 .env`
 - Never share keys in chat or slides
 - Alternative: skip live inference entirely; use `coyote_metadata_comparison.csv`
 
@@ -167,8 +167,7 @@ Ask by show of hands:
 If you have keys and network:
 
 ```bash
-cd classroom_demo
-python3 classroom_vlm_comparison.py --image workshop_images/7109.jpg --models gpt4o,gemini,claude
+python3 classroom_vlm_comparison.py --image workshopImages/7109.jpg --models gpt4o,gemini,claude
 python3 compare_model_agreement.py --input output/*_comparison.jsonl --output demo_report.json
 ```
 
@@ -229,10 +228,10 @@ Data is on the worksheet; optional source: `coyote_metadata_comparison.csv`.
 ### Run the script (instructor, 5 min)
 
 ```bash
-# Quick report for one image — filter CSV mentally or use --limit
-python3 classroom_demo/compare_model_agreement.py \
-  --csv classroom_demo/coyote_metadata_comparison.csv \
-  --output classroom_demo/workshop_report.json \
+python3 compare_model_agreement.py \
+  --csv coyote_metadata_comparison.csv \
+  --species-hint coyote \
+  --output workshop_report.json \
   --limit 20 \
   --no-sbert
 ```
@@ -356,22 +355,28 @@ Same empty answer ("not visible") →  Lexical: HIGH  |  tier: absent
 
 ### Commands cheat sheet (handout)
 
-```bash
-# 1) Compare models on images (instructor, needs API keys)
-python3 classroom_demo/classroom_vlm_comparison.py --image photo.jpg --models auto
+Run from **repo root** after `git clone` (no `classroom_demo/` prefix):
 
-# 2) Agreement + semantic metrics from wide CSV
-python3 classroom_demo/compare_model_agreement.py \
-  --csv classroom_demo/coyote_metadata_comparison.csv \
+```bash
+# 1) Compare models on images (instructor, needs API keys in .env)
+python3 classroom_vlm_comparison.py --image workshopImages/7109.jpg --models auto
+
+# 2) Regenerate agreement + metrics from CSV (optional — SBERT outputs are in coyote_sbert_metrics/)
+python3 compare_model_agreement.py \
+  --csv coyote_metadata_comparison.csv \
   --species-hint coyote \
   --output report.json \
   --metrics-dir metrics_out/
 
 # 3) No GPU / no SBERT (lexical + TF-IDF only)
-python3 classroom_demo/compare_model_agreement.py ... --no-sbert
+python3 compare_model_agreement.py \
+  --csv coyote_metadata_comparison.csv \
+  --species-hint coyote \
+  --output report.json \
+  --no-sbert
 
-# 4) Students without keys
-python3 classroom_demo/classroom_vlm_comparison.py --demo --image any.jpg
+# 4) Demo mode without keys
+python3 classroom_vlm_comparison.py --demo --image workshopImages/7109.jpg
 ```
 
 ### Closing questions (split room or popcorn)
@@ -403,13 +408,14 @@ python3 classroom_demo/classroom_vlm_comparison.py --demo --image any.jpg
 ## Instructor prep checklist (week before)
 
 - [ ] Print handouts from **`handouts/`** — mix of `practitioner_*_2page.md` by table assignment + `cs_supplement_1page.md` for CS (~4×7109, 3×7225, 3×7149, 8–10 CS supplements)
-- [x] Demo images in `classroom_demo/workshop_images/` (7109, 7225, 7149)
-- [ ] Test `compare_model_agreement.py --limit 5 --no-sbert` on your laptop
+- [x] Demo images in `workshopImages/` (7109, 7225, 7149)
+- [ ] Confirm **`coyote_sbert_metrics/`** and **`coyote_sbert_report.json`** are in the repo (or run `./copy_sbert_from_taiga.sh` from Taiga)
+- [ ] Test `compare_model_agreement.py --limit 5 --no-sbert` on your laptop (optional)
 - [ ] Print or share CSV excerpt (3 rows) for Tier B participants
 - [ ] Decide: live API demo yes/no
 - [ ] Prepare `.env` on lab machine OR use CSV-only path
 - [ ] Optional: export one slide per image with photo + 3-column table
-- [ ] Read `coyote_sbert_report.json` → `assessments` for the three image IDs (backup if live demo fails)
+- [ ] Skim `coyote_sbert_metrics/image_trust_summary.json` for 7109 / 7225 / 7149 / 7221 (backup if live demo fails)
 
 ---
 
@@ -432,7 +438,9 @@ python3 classroom_demo/classroom_vlm_comparison.py --demo --image any.jpg
 | `compare_model_agreement.py` | Agreement report + optional SBERT metrics |
 | `add_evaluation_metrics.py` | Semantic similarity per attribute |
 | `coyote_metadata_comparison.csv` | Pre-computed 334×3 workshop dataset |
-| `coyote_sbert_report.json` | Full run (on Taiga; copy for offline) |
+| `coyote_sbert_metrics/` | Pre-computed SBERT per-attribute CSVs + `image_trust_summary.json` |
+| `coyote_sbert_report.json` | Full 334-image agreement + semantic report |
+| `copy_sbert_from_taiga.sh` | Copy metrics from Taiga into repo |
 | `handouts/` | PDF-friendly 2-page practitioner sheets, CS supplement, full print doc |
 | `PARTICIPANT_WORKSHEET.md` | All-in-one markdown handout |
 | `WORKSHOP_60MIN.md` | This instructor guide |

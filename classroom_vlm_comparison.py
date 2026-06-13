@@ -433,7 +433,7 @@ def main() -> None:
     parser.add_argument("--image", help="Single image path")
     parser.add_argument("--input-dir", help="Directory of images")
     parser.add_argument("--models", default="auto", help="Comma-separated: gpt4o,azure,gemini,claude or auto")
-    parser.add_argument("--output-dir", default="classroom_demo/output", help="Output directory")
+    parser.add_argument("--output-dir", default="output", help="Output directory")
     parser.add_argument("--dataset-type", default="demo", help="MCP dataset_type field (livestock, pest, crop, demo)")
     parser.add_argument("--demo", action="store_true", help="Use bundled sample outputs (no API keys)")
     parser.add_argument("--env-file", default="", help="Optional .env path (not committed to git)")
@@ -446,7 +446,7 @@ def main() -> None:
     if args.image and args.input_dir:
         parser.error("Use only one of --image or --input-dir")
 
-    env_path = Path(args.env_file).resolve() if args.env_file else SCRIPT_DIR.parent / ".env"
+    env_path = Path(args.env_file).resolve() if args.env_file else SCRIPT_DIR / ".env"
     load_dotenv(env_path)
 
     images = collect_images(args)
@@ -487,21 +487,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-You're set for the workshop. Here's what's ready in one place:
-
-Materials
-
-classroom_demo/WORKSHOP_60MIN.md — 60-min instructor guide (mixed educator + CS)
-classroom_demo/handouts/ — 2-page sheets per image + CS supplement + print guide
-classroom_demo/workshop_images/ — 7109, 7225, 7149
-classroom_demo/coyote_metadata_comparison.csv — 334×3 pre-computed model outputs
-Taiga report — full SBERT run (optional deep dive)
-Day-of flow (short)
-
-Project 7109 → three model columns → human agree/partial/disagree
-Reveal scores → 7225 (paraphrase surprise) → 7149 (fog outlier)
-Close with: agreement ≠ truth; species solid; almost nothing auto-trusts
-Print (~20 people): 4×7109, 3×7225, 3×7149 handouts + 8–10 CS supplements (see handouts/make_pdfs.sh).
-
-Good luck with the session — it should land well with both practitioners and CS folks. If you want speaker notes on one slide or a 5-minute backup plan if Wi‑Fi fails, say the word.

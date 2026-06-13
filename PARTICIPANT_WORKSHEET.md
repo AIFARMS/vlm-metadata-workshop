@@ -147,8 +147,8 @@ When is **min** too strict? ____________________________________________________
 ### C. Try it (laptop + repo)
 
 ```bash
-python3 classroom_demo/compare_model_agreement.py \
-  --csv classroom_demo/coyote_metadata_comparison.csv \
+python3 compare_model_agreement.py \
+  --csv coyote_metadata_comparison.csv \
   --species-hint coyote \
   --output /tmp/workshop_report.json \
   --limit 20 \
@@ -186,4 +186,4 @@ What belongs in `[???]` for a production system that is *not* just “pick the l
 
 ---
 
-*Workshop materials: `classroom_demo/handouts/` — short educator sheets: `practitioner_*_2page.md` · CS: `cs_supplement_1page.md`*
+*Workshop materials: `handouts/` — short educator sheets: `practitioner_*_2page.md` · CS: `cs_supplement_1page.md`*
