@@ -411,7 +411,7 @@ python3 classroom_vlm_comparison.py --demo --image workshopImages/7109.jpg
 
 - [ ] Print handouts from **`handouts/`** — mix of `practitioner_*_2page.md` by table assignment + `cs_supplement_1page.md` for CS (~4×7109, 3×7225, 3×7149, 8–10 CS supplements)
 - [x] Demo images in `workshopImages/` (7109, 7225, 7149)
-- [ ] Confirm **`coyote_sbert_metrics/`** and **`coyote_sbert_report.json`** are in the repo (or run `./copy_sbert_from_taiga.sh` from Taiga)
+- [ ] Confirm **`coyote_sbert_metrics/`** and **`coyote_sbert_report.json`** are in the repo
 - [ ] Test `compare_model_agreement.py --limit 5 --no-sbert` on your laptop (optional)
 - [ ] Print or share CSV excerpt (3 rows) for Tier B participants
 - [ ] Decide: live API demo yes/no
@@ -442,7 +442,6 @@ python3 classroom_vlm_comparison.py --demo --image workshopImages/7109.jpg
 | `coyote_metadata_comparison.csv` | Pre-computed 334×3 workshop dataset |
 | `coyote_sbert_metrics/` | Pre-computed SBERT per-attribute CSVs + `image_trust_summary.json` |
 | `coyote_sbert_report.json` | Full 334-image agreement + semantic report |
-| `copy_sbert_from_taiga.sh` | Copy metrics from Taiga into repo |
 | `handouts/` | PDF-friendly 2-page practitioner sheets, CS supplement, full print doc |
 | `PARTICIPANT_WORKSHEET.md` | All-in-one markdown handout |
 | `WORKSHOP_60MIN.md` | This instructor guide |

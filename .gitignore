@@ -15,11 +15,14 @@ venv/
 .idea/
 .vscode/
 
-# Regenerated outputs (re-run compare_model_agreement.py)
+# Regenerated locally (TF-IDF / ad-hoc runs — do not commit)
 coyote_metrics/
 coyote_agreement_metrics/
 coyote_agreement_report.json
-coyote_sbert_report.json
+
+# Bundled workshop artifacts (committed in repo):
+#   coyote_sbert_metrics/
+#   coyote_sbert_report.json
 /tmp/
 
 # Optional: uncomment to keep PDFs out of git (regenerate with handouts/make_pdfs.sh)

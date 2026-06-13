@@ -2,7 +2,7 @@
 
 Full **semantic agreement** outputs from the Delta/Taiga run (`all-MiniLM-L6-v2`, min pairwise SBERT, default thresholds high ≥ 0.72 / partial ≥ 0.55).
 
-## Files (after copy from Taiga)
+## Files
 
 | File | Contents |
 |------|----------|
@@ -14,23 +14,7 @@ Full **semantic agreement** outputs from the Delta/Taiga run (`all-MiniLM-L6-v2`
 | `metrics_summary.json` | Rollups per attribute + thresholds |
 | `image_trust_summary.json` | Per-image auto-trust (≥4/5 fields high or absent) |
 
-Also copy **`../coyote_sbert_report.json`** (full agreement report with `assessments` + `semantic_metrics`).
-
-## Populate this folder (instructor / maintainer)
-
-When Taiga is mounted:
-
-```bash
-./copy_sbert_from_taiga.sh
-git add coyote_sbert_metrics/ coyote_sbert_report.json
-git status   # confirm files present
-git commit -m "Add pre-computed SBERT metrics for 334-image coyote workshop set."
-git push
-```
-
-Default Taiga source (override with env vars):
-
-`/taiga/ncsa/radiant/bbgp/rgpu02/owodd/coco_datasets/classroom_demo/`
+**`../coyote_sbert_report.json`** — full agreement report with `assessments` + `semantic_metrics`.
 
 ## Workshop use (no SBERT install required)
 

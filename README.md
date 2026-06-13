@@ -11,7 +11,7 @@ Built for educators and CS instructors. No MCP server required; runs from this r
 | [handouts/](handouts/) | Printable 2-page sheets + CS supplement |
 | [workshopImages/](workshopImages/) | Demo JPEGs: `7109.jpg`, `7225.jpg`, `7149.jpg` |
 | [coyote_metadata_comparison.csv](coyote_metadata_comparison.csv) | Pre-computed outputs: **334 images × 3 models** |
-| [coyote_sbert_metrics/](coyote_sbert_metrics/) | Pre-computed **SBERT** agreement (334 images; copy from Taiga — see below) |
+| [coyote_sbert_metrics/](coyote_sbert_metrics/) | Pre-computed **SBERT** agreement (334 images) |
 | [compare_model_agreement.py](compare_model_agreement.py) | Agreement report + optional SBERT metrics |
 | [classroom_vlm_comparison.py](classroom_vlm_comparison.py) | Live multi-model inference (optional; needs API keys) |
 
@@ -34,15 +34,12 @@ python3 compare_model_agreement.py \
 
 Open `workshopImages/7109.jpg` while reading the report. Full agenda: [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md).
 
-### Pre-computed SBERT (included after Taiga copy — no GPU)
+### Pre-computed SBERT (bundled — no GPU)
 
 The repo ships **`coyote_sbert_metrics/`** and **`coyote_sbert_report.json`** so instructors and CS participants can explore semantic tiers without running SBERT.
 
 ```bash
-# One-time (maintainer): when Taiga is mounted
-./copy_sbert_from_taiga.sh
-
-# Workshop: lookup auto-trust images (expect 7221.jpg, 7225.jpg)
+# Lookup auto-trust images (expect 7221.jpg, 7225.jpg)
 python3 -c "
 import json
 t=json.load(open('coyote_sbert_metrics/image_trust_summary.json'))
@@ -113,9 +110,8 @@ Or in Cursor: install **Markdown PDF** extension → open a `.md` handout → `C
 ├── requirements-live.txt      # optional VLM APIs
 ├── requirements-sbert.txt     # optional SBERT
 ├── coyote_metadata_comparison.csv
-├── coyote_sbert_metrics/      # SBERT metrics (after copy_sbert_from_taiga.sh)
-├── coyote_sbert_report.json   # full agreement report (same)
-├── copy_sbert_from_taiga.sh
+├── coyote_sbert_metrics/      # pre-computed SBERT metrics (334 images)
+├── coyote_sbert_report.json   # full agreement report
 ├── compare_model_agreement.py
 ├── add_evaluation_metrics.py
 ├── classroom_vlm_comparison.py
