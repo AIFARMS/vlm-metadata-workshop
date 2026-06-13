@@ -11,6 +11,7 @@ Built for educators and CS instructors. No MCP server required; runs from this r
 | [handouts/](handouts/) | Printable 2-page sheets + CS supplement |
 | [workshopImages/](workshopImages/) | Demo JPEGs: `7109.jpg`, `7225.jpg`, `7149.jpg` |
 | [coyote_metadata_comparison.csv](coyote_metadata_comparison.csv) | Pre-computed outputs: **334 images × 3 models** |
+| [coyote_sbert_metrics/](coyote_sbert_metrics/) | Pre-computed **SBERT** agreement (334 images; copy from Taiga — see below) |
 | [compare_model_agreement.py](compare_model_agreement.py) | Agreement report + optional SBERT metrics |
 | [classroom_vlm_comparison.py](classroom_vlm_comparison.py) | Live multi-model inference (optional; needs API keys) |
 
@@ -33,7 +34,25 @@ python3 compare_model_agreement.py \
 
 Open `workshopImages/7109.jpg` while reading the report. Full agenda: [WORKSHOP_60MIN.md](WORKSHOP_60MIN.md).
 
-### Optional: semantic (SBERT) metrics
+### Pre-computed SBERT (included after Taiga copy — no GPU)
+
+The repo ships **`coyote_sbert_metrics/`** and **`coyote_sbert_report.json`** so instructors and CS participants can explore semantic tiers without running SBERT.
+
+```bash
+# One-time (maintainer): when Taiga is mounted
+./copy_sbert_from_taiga.sh
+
+# Workshop: lookup auto-trust images (expect 7221.jpg, 7225.jpg)
+python3 -c "
+import json
+t=json.load(open('coyote_sbert_metrics/image_trust_summary.json'))
+print([k for k,v in t.items() if v.get('auto_trust')])
+"
+```
+
+See [coyote_sbert_metrics/README.md](coyote_sbert_metrics/README.md) for column definitions and demo-image notes.
+
+### Regenerate SBERT yourself (Delta / GPU machine)
 
 ```bash
 pip install -r requirements-sbert.txt
@@ -59,6 +78,8 @@ python3 classroom_vlm_comparison.py \
 **Five scene fields × three models (GPT-4o, GPT-4.5, Llama):**
 
 Weather · Background · Lighting · Time of Day · Setting (scene)
+
+**Note:** The middle Azure column is labeled **GPT-4.5** in CSV and JSON exports, but the deployment that generated this dataset was **GPT-4.1** (an Azure preview that was later retired and released as GPT-4.1—the export header was not updated).
 
 **There are no per-model species columns.** This dataset compares **scene/context** attributes, not species ID from each VLM.
 
@@ -96,6 +117,9 @@ Or in Cursor: install **Markdown PDF** extension → open a `.md` handout → `C
 ├── requirements-live.txt      # optional VLM APIs
 ├── requirements-sbert.txt     # optional SBERT
 ├── coyote_metadata_comparison.csv
+├── coyote_sbert_metrics/      # SBERT metrics (after copy_sbert_from_taiga.sh)
+├── coyote_sbert_report.json   # full agreement report (same)
+├── copy_sbert_from_taiga.sh
 ├── compare_model_agreement.py
 ├── add_evaluation_metrics.py
 ├── classroom_vlm_comparison.py
@@ -104,7 +128,7 @@ Or in Cursor: install **Markdown PDF** extension → open a `.md` handout → `C
 └── samples/demo_comparison.json
 ```
 
-Large outputs (`coyote_metrics/`, agreement JSON) are gitignored; regenerate with the commands above.
+Large ad-hoc outputs (`coyote_metrics/`, `coyote_agreement_report.json`) stay gitignored. **`coyote_sbert_metrics/`** is meant to be committed for the workshop.
 
 ---
 

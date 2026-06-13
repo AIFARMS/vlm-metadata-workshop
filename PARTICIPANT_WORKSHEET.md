@@ -4,6 +4,8 @@
 **Name:** _________________________ **Image assigned:** ☐ 7109 ☐ 7225 ☐ 7149  
 **Background:** ☐ Educator / practitioner ☐ CS / technical ☐ Other __________
 
+**Note:** Tables and CSV columns label the middle Azure model **GPT-4.5**, but the deployment used for this workshop data was **GPT-4.1** (an Azure preview later retired and released as GPT-4.1—the export label was left unchanged).
+
 ---
 
 ## Part 1 — Look, then read (8 min)
