@@ -124,8 +124,6 @@ Or in Cursor: install **Markdown PDF** extension → open a `.md` handout → `C
 └── samples/demo_comparison.json
 ```
 
-Large ad-hoc outputs (`coyote_metrics/`, `coyote_agreement_report.json`) stay gitignored. **`coyote_sbert_metrics/`** is meant to be committed for the workshop.
-
 ---
 
 ## License
